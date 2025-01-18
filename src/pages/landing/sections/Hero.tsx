@@ -2,12 +2,13 @@ export default function Hero() {
   return (
     <section className="bg-white dark:bg-gray-900 h-[60vh] flex align-middle">
       <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
-        <div className="mr-auto place-self-center lg:col-span-7">
+        <div className="mr-auto place-self-center lg:col-span-7 text-center md:text-left  ">
           <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">
-            Think, Plan, and Track 
+            Think, Plan, and Track
           </h1>
           <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
-            A simple and flexible task management tool for teams and individuals that helps you plan, organize, and track your work.
+            A simple and flexible task management tool for teams and individuals
+            that helps you plan, organize, and track your work.
           </p>
           <a
             href="#"
@@ -30,7 +31,7 @@ export default function Hero() {
         </div>
         <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
           <img
-            src='/src/assets/hero/task-list.svg'
+            src="/src/assets/hero/task-list.svg"
             alt="mockup"
             className="hover:-translate-y-10 hover:scale-105 duration-500"
           />

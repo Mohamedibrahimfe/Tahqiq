@@ -1,12 +1,31 @@
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 export default function Contact() {
+  const form = useRef();
+  const sendEmail = (e) => {
+    
+    e.preventDefault();
+    emailjs
+      .sendForm(import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID, form.current, {
+        publicKey: import.meta.env.VITE_EMAILJS_API_KEY,
+      })
+      .then(
+        () => {
+          alert('SUCCESS!');
+        },
+        (error) => {
+          alert('FAILED...', error);
+        },
+      );
+  };
   return (
-    <section id="contact" className="py-20 bg-white dark:bg-gray-900">
-      <h2 className="text-3xl font-bold text-center text-white">Contact Us</h2>
-      <form className="max-w-md mx-auto">
+    <section id="contact" className="py-20 bg-white dark:bg-gray-900 px-4 md:px-0">
+      <h2 className="text-3xl font-bold text-center text-white my-4 ">Contact Us</h2>
+      <form className="max-w-md mx-auto" ref={form} onSubmit={sendEmail}>
         <div className="relative z-0 w-full mb-5 group">
           <input
             type="text"
-            name="floating_first_name"
+            name="name"
             id="floating_first_name"
             className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             placeholder=" "
@@ -22,7 +41,7 @@ export default function Contact() {
         <div className="relative z-0 w-full mb-5 group">
           <input
             type="email"
-            name="floating_email"
+            name="email"
             id="floating_email"
             className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             placeholder=" "

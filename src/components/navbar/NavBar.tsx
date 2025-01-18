@@ -39,7 +39,7 @@ export default function NavBar() {
                 setDarkTheme(!darkTheme);
                 localStorage.setItem("darkTheme", darkTheme ? "false" : "true");
               }}
-              className="w-6 h-6 text-gray-500 dark:text-gray-400 cursor-pointer"
+              className="w-6 h-6 text-gray-500 dark:text-gray-400 cursor-pointer my-3 md:my-0"
             />
           ) : (
             <IoSunnyOutline
@@ -47,7 +47,7 @@ export default function NavBar() {
                 setDarkTheme(!darkTheme);
                 localStorage.setItem("darkTheme", darkTheme ? "false" : "true");
               }}
-              className="w-6 h-6 text-gray-500 dark:text-gray-400 cursor-pointer"
+              className="w-6 h-6 text-gray-500 dark:text-gray-400 cursor-pointer my-3 md:my-0"
             />
           )}
 
