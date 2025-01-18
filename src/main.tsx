@@ -8,25 +8,25 @@ import Profile from "./pages/profile/Profile";
 import NoPage from "./pages/NoPage";
 
 import "./index.css";
-
-//
-// import { Provider } from 'react-redux';
-// import store from './store/theme/themeSlice';
-
-//
+// context
+import { createContext, useState } from "react";
+export const Context = createContext();
+// context end
 export default function App() {
+  const [darkTheme, setDarkTheme] = useState(true);
+
   return (
     <BrowserRouter>
-      {/* <Provider value={store}> */}
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="dashboard" element={<DashBoard />} />
-          <Route path="profile" element={<Profile />} />
-          <Route path="*" element={<NoPage />} />
-        </Route>
-      </Routes>
-      {/* </Provider> */}
+      <Context.Provider value={{ darkTheme, setDarkTheme }}>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="dashboard" element={<DashBoard />} />
+            <Route path="profile" element={<Profile />} />
+            <Route path="*" element={<NoPage />} />
+          </Route>
+        </Routes>
+      </Context.Provider>
     </BrowserRouter>
   );
 }

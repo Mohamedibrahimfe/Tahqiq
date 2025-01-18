@@ -18,7 +18,7 @@ export default function Hero() {
               className="w-5 h-5 ml-2 -mr-1"
               fill="currentColor"
               viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
+              xmlns="http://www.w3.org/2000/svg "
             >
               <path
                 fill-rule="evenodd"
@@ -32,6 +32,7 @@ export default function Hero() {
           <img
             src='/src/assets/hero/task-list.svg'
             alt="mockup"
+            className="hover:-translate-y-10 hover:scale-105 duration-500"
           />
         </div>
       </div>

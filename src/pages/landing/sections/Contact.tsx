@@ -1,6 +1,7 @@
 export default function Contact() {
   return (
-    <section id="contact" className="py-20 bg-gray-50 dark:bg-gray-900">
+    <section id="contact" className="py-20 bg-white dark:bg-gray-900">
+      <h2 className="text-3xl font-bold text-center text-white">Contact Us</h2>
       <form className="max-w-md mx-auto">
         <div className="relative z-0 w-full mb-5 group">
           <input
