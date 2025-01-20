@@ -1,13 +1,13 @@
 import { Outlet } from "react-router-dom";
-import NavBar from "../components/navbar/NavBar";
-import Footer from "../components/footer/Footer";
-
+import NavBar from "../../components/navbar/NavBar";
+import Footer from "../../components/footer/Footer";
+import MayShowNaviagtopn from "../../components/mayshownavigation/MayShowNaviagtopn";
 const Layout = () => {
   return (
     <div>
-      <div className="mb-16">
+      <MayShowNaviagtopn >
         <NavBar />
-      </div>
+      </MayShowNaviagtopn>
       <div className="max-w-screen-xl mx-auto ">
         <Outlet />
       </div>
