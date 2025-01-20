@@ -13,7 +13,7 @@ export default function NavBar() {
   useEffect(() => {
     if (localStorage.getItem("darkTheme") === "true") {
       document.documentElement.classList.add("dark");
-    }else{
+    } else {
       document.documentElement.classList.remove("dark");
     }
   }, [darkTheme, setDarkTheme]);
@@ -25,7 +25,9 @@ export default function NavBar() {
           to="/"
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
-          <CiCircleCheck className="w-8 h-8 text-white " />
+          <CiCircleCheck
+            className={darkTheme ? "w-8 h-8 text-white" : "w-8 h-8"}
+          />
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
             TA<span className="text-blue-600">HQ</span>IQ
           </span>
@@ -35,7 +37,7 @@ export default function NavBar() {
         <div className="flex md:order-2 md:space-x-0 rtl:space-x-reverse md:gap-3 md:flex-row md:items-center">
           {!darkTheme ? (
             <IoMoonSharp
-              onClick={() =>{
+              onClick={() => {
                 setDarkTheme(!darkTheme);
                 localStorage.setItem("darkTheme", darkTheme ? "false" : "true");
               }}
@@ -69,6 +71,11 @@ export default function NavBar() {
             className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
             aria-controls="navbar-sticky"
             aria-expanded="false"
+            onClick={() => {
+              document
+                .getElementById("navbar-sticky")
+                .classList.toggle("hidden") 
+            }}
           >
             <span className="sr-only">Open main menu</span>
             <svg
@@ -143,7 +150,7 @@ export default function NavBar() {
             </li>
             <li>
               <a
-                href="#contact"
+                href="#features"
                 className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
               >
                 Features

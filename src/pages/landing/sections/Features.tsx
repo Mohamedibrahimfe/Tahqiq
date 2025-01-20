@@ -3,10 +3,12 @@ import icontwo from "../../../assets/features/employee-is-working-online.svg";
 import iconthree from "../../../assets/features/task-appointment-management.svg";
 export default function Features() {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 py-16 max-w-screen-xl ">
+    <section
+      id="features"
+    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 py-16 max-w-screen-xl ">
       <div
         className="max-w-sm  mx-auto bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:
-       duration-300 ease-in-out hover:shadow-lg hover:border-gray-300 hover:bg-gray-700"
+       duration-300 ease-in-out hover:shadow-lg hover:border-gray-300 hover:dark:bg-gray-700"
       >
         <img
           src={iconthree}
@@ -27,7 +29,7 @@ export default function Features() {
       </div>
       <div
         className="max-w-sm  mx-auto bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:
-       duration-300 ease-in-out hover:shadow-lg hover:border-gray-300 hover:bg-gray-700"
+       duration-300 ease-in-out hover:shadow-lg hover:border-gray-300 hover:dark:bg-gray-700"
       >
         <img
           src={icontwo}
@@ -48,7 +50,7 @@ export default function Features() {
       </div>
       <div
         className="max-w-sm  mx-auto bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:
-       duration-300 ease-in-out hover:shadow-lg hover:border-gray-300 hover:bg-gray-700"
+       duration-300 ease-in-out hover:shadow-lg hover:border-gray-300 hover:dark:bg-gray-700"
       >
         <img
           src={iconone}
